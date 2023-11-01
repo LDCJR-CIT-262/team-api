@@ -17,6 +17,9 @@ it("Should get a login token",async ()=>{
     const response = await fetch('http://localhost:3000/levi');
 
     const name = await response.text();
-    expect.(name).toBe("sean");
+    const status = response.status
+
+    expect(status).toBe(200)
+    expect(name).toBe("sean");
 
 })
