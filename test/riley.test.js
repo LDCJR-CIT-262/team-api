@@ -8,6 +8,6 @@ it("Should say Riley",async ()=>{
     const status = response.status
 
     expect(status).toBe(200)
-    expect(name).toBe("riley");
+    expect(name).toBe("Hello Riley");
 
 })
