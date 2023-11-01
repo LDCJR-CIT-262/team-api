@@ -6,13 +6,9 @@ const baseUrl = `http://localhost:${port}`;
 // Start your server before running the tests
 const server = require('./your-express-app-file'); // Replace with the actual file path
 
-// Close the server after running the tests
-afterAll(() => {
-  server.close();
+test('Test Express route for Hello Cody', async () => {
+  const response = await fetch(`${baseUrl}/Cody`);
+  const name = await response.text();
+  expect(name).toBe('Hello Cody');
 });
 
-test('Test Express routes', async () => {
-  const responseCody = await fetch(`${baseUrl}/Cody`);
-  const nameCody = await responseCody.text();
-  expect(nameCody).toBe('Hello Cody');
-});
