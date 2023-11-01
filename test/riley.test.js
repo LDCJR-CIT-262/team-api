@@ -1,13 +1,13 @@
-const fetch = require('node-fetch');
+const fetch = require("node-fetch2");
 
-const port = 3000;
-const baseUrl = `http://localhost:${port}`;
+it("Should say Riley",async ()=>{
 
-// Start your server before running the tests
-const server = require('./your-express-app-file'); // Replace with the actual file path
+    const response = await fetch('http://localhost:3000/riley');
 
-test('Test Express route for Hello Riley', async () => {
-  const response = await fetch(`${baseUrl}/Riley`);
-  const name = await response.text();
-  expect(name).toBe('Hello Riley');
-});
+    const name = await response.text();
+    const status = response.status
+
+    expect(status).toBe(200)
+    expect(name).toBe("riley");
+
+})
