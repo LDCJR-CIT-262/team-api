@@ -12,4 +12,6 @@ app.get('/Cody', (req,res) => {res.send("Hello Cody")}); 
 
 app.get('/Diego', (req,res) => {res.send("Hello Diego")}); 
 
+app.get('/Levi', (req,res) => {res.send("Hello Levi")}); 
+
 app.listen(port, ()=>console.log("Listening"));
